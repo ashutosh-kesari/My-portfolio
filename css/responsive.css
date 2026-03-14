@@ -1,0 +1,67 @@
+/* ============================================
+   ASHUTOSH KESARI PORTFOLIO — RESPONSIVE CSS
+   ============================================ */
+
+@media (max-width: 1100px) {
+  .hero-inner { gap: 48px; }
+  .portrait-container { width: 340px; height: 450px; }
+}
+
+@media (max-width: 900px) {
+  nav { padding: 0 20px; }
+
+  .nav-links { display: none; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 70px; left: 0; right: 0;
+    background: rgba(14,10,9,0.98); padding: 20px; gap: 16px;
+    border-bottom: 1px solid var(--border);
+    z-index: 99;
+  }
+  .nav-links.open a { font-size: 16px; }
+
+  .hamburger { display: flex; }
+  .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+  section { padding: 80px 20px; }
+  #hero { padding: 70px 20px 0; }
+
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-right { order: -1; }
+  .portrait-container { width: 280px; height: 360px; }
+  .hero-nav-cards { display: none; }
+
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .social-grid { grid-template-columns: 1fr; }
+  .design-grid { grid-template-columns: repeat(2, 1fr); }
+  .communities-grid { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+
+  .hero-name { font-size: clamp(40px, 10vw, 60px); }
+}
+
+@media (max-width: 600px) {
+  .hero-name { font-size: 38px; letter-spacing: -2px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .design-grid { grid-template-columns: 1fr; }
+  .portrait-container { width: 240px; height: 300px; }
+  .section-title { font-size: 28px; }
+  footer { padding: 20px; }
+
+  .portrait-badge { top: -10px; left: -10px; font-size: 10px; padding: 6px 10px; }
+  .portrait-stat { bottom: -10px; right: -10px; padding: 10px 14px; }
+  .portrait-stat .sn { font-size: 20px; }
+}
+
+/* Poetry grid responsive */
+@media (max-width: 900px) {
+  .poetry-grid { grid-template-columns: repeat(2, 1fr); }
+  .lb-nav { display: none; }
+}
+@media (max-width: 600px) {
+  .poetry-grid { grid-template-columns: 1fr; }
+}
